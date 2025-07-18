@@ -1,0 +1,327 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc",
+  "files": [
+    "__original-animation-0.cconb",
+    "__original-animation-1.cconb",
+    "__original-animation-2.cconb"
+  ],
+  "subMetas": {
+    "37063": {
+      "importer": "gltf-mesh",
+      "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@37063",
+      "displayName": "",
+      "id": "37063",
+      "name": "RammerBug_mesh.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 1116
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "85416": {
+      "importer": "gltf-material",
+      "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@85416",
+      "displayName": "",
+      "id": "85416",
+      "name": "M_RammerBug.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "48e39": {
+      "importer": "gltf-animation",
+      "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@48e39",
+      "displayName": "",
+      "id": "48e39",
+      "name": "RummerBag_Attack.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.6666666865348816
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "ee29f": {
+      "importer": "gltf-animation",
+      "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@ee29f",
+      "displayName": "",
+      "id": "ee29f",
+      "name": "RummerBug_Death.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.7666666507720947
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "74c9e": {
+      "importer": "gltf-animation",
+      "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@74c9e",
+      "displayName": "",
+      "id": "74c9e",
+      "name": "RummerBug_Idle.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.066666603088379
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "3a628": {
+      "importer": "gltf-skeleton",
+      "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@3a628",
+      "displayName": "",
+      "id": "3a628",
+      "name": "ingamepos.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 17
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b31de": {
+      "importer": "gltf-embeded-image",
+      "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@b31de",
+      "displayName": "",
+      "id": "b31de",
+      "name": "RammerBug_NM.PNG.image",
+      "userData": {
+        "gltfIndex": 0,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": false,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7811e": {
+      "importer": "gltf-embeded-image",
+      "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@7811e",
+      "displayName": "",
+      "id": "7811e",
+      "name": "RammerBugElite_Full.PNG.image",
+      "userData": {
+        "gltfIndex": 1,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": false,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3effa": {
+      "importer": "texture",
+      "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@3effa",
+      "displayName": "",
+      "id": "3effa",
+      "name": "UnnamedTexture-0.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@b31de"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "221a5": {
+      "importer": "texture",
+      "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@221a5",
+      "displayName": "",
+      "id": "221a5",
+      "name": "UnnamedTexture-1.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@7811e"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0cbd8": {
+      "importer": "gltf-scene",
+      "uuid": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@0cbd8",
+      "displayName": "",
+      "id": "0cbd8",
+      "name": "RummerBUG (2).prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "RammerBug_NM.PNG",
+        "uri": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@b31de"
+      },
+      {
+        "name": "RammerBugElite_Full.PNG",
+        "uri": "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@7811e"
+      }
+    ],
+    "animationImportSettings": [
+      {
+        "name": "RummerBag_Attack",
+        "duration": 0.6666666865348816,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "RummerBag_Attack",
+            "from": 0,
+            "to": 0.6666666865348816,
+            "wrapMode": 2,
+            "previousId": "48e39"
+          }
+        ]
+      },
+      {
+        "name": "RummerBug_Death",
+        "duration": 0.7666666507720947,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "RummerBug_Death",
+            "from": 0,
+            "to": 0.7666666507720947,
+            "wrapMode": 2,
+            "previousId": "ee29f"
+          }
+        ]
+      },
+      {
+        "name": "RummerBug_Idle",
+        "duration": 2.066666603088379,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "RummerBug_Idle",
+            "from": 0,
+            "to": 2.066666603088379,
+            "wrapMode": 2,
+            "previousId": "74c9e"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@37063"
+      ],
+      "skeletons": [
+        "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@3a628"
+      ],
+      "textures": [
+        "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@3effa",
+        "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@221a5"
+      ],
+      "materials": [
+        "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@85416"
+      ],
+      "scenes": [
+        "4820bfaf-7065-43c1-a987-1fa9d0e1a6cc@0cbd8"
+      ]
+    }
+  }
+}

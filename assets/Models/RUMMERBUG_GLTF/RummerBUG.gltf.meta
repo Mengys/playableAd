@@ -1,0 +1,287 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "8c8a457a-82eb-44d4-9da4-4c739058195e",
+  "files": [
+    "__original-animation-0.cconb",
+    "__original-animation-1.cconb",
+    "__original-animation-2.cconb"
+  ],
+  "subMetas": {
+    "37063": {
+      "importer": "gltf-mesh",
+      "uuid": "8c8a457a-82eb-44d4-9da4-4c739058195e@37063",
+      "displayName": "",
+      "id": "37063",
+      "name": "RammerBug_mesh.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 1116
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "85416": {
+      "importer": "gltf-material",
+      "uuid": "8c8a457a-82eb-44d4-9da4-4c739058195e@85416",
+      "displayName": "",
+      "id": "85416",
+      "name": "M_RammerBug.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "48e39": {
+      "importer": "gltf-animation",
+      "uuid": "8c8a457a-82eb-44d4-9da4-4c739058195e@48e39",
+      "displayName": "",
+      "id": "48e39",
+      "name": "RummerBag_Attack.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.6666666865348816
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "ee29f": {
+      "importer": "gltf-animation",
+      "uuid": "8c8a457a-82eb-44d4-9da4-4c739058195e@ee29f",
+      "displayName": "",
+      "id": "ee29f",
+      "name": "RummerBug_Death.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.7666666507720947
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "74c9e": {
+      "importer": "gltf-animation",
+      "uuid": "8c8a457a-82eb-44d4-9da4-4c739058195e@74c9e",
+      "displayName": "",
+      "id": "74c9e",
+      "name": "RummerBug_Idle.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.066666603088379
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "3a628": {
+      "importer": "gltf-skeleton",
+      "uuid": "8c8a457a-82eb-44d4-9da4-4c739058195e@3a628",
+      "displayName": "",
+      "id": "3a628",
+      "name": "ingamepos.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 17
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3effa": {
+      "importer": "texture",
+      "uuid": "8c8a457a-82eb-44d4-9da4-4c739058195e@3effa",
+      "displayName": "",
+      "id": "3effa",
+      "name": "UnnamedTexture-0.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Models/RUMMERBUG_GLTF/RammerBug_NM.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "221a5": {
+      "importer": "texture",
+      "uuid": "8c8a457a-82eb-44d4-9da4-4c739058195e@221a5",
+      "displayName": "",
+      "id": "221a5",
+      "name": "UnnamedTexture-1.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Models/RUMMERBUG_GLTF/RammerBugElite_Full.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "52e39": {
+      "importer": "gltf-scene",
+      "uuid": "8c8a457a-82eb-44d4-9da4-4c739058195e@52e39",
+      "displayName": "",
+      "id": "52e39",
+      "name": "RummerBUG.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "RammerBug_NM",
+        "uri": "db://assets/Models/RUMMERBUG_GLTF/RammerBug_NM.png"
+      },
+      {
+        "name": "RammerBugElite_Full",
+        "uri": "db://assets/Models/RUMMERBUG_GLTF/RammerBugElite_Full.png"
+      }
+    ],
+    "animationImportSettings": [
+      {
+        "name": "RummerBag_Attack",
+        "duration": 0.6666666865348816,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "RummerBag_Attack",
+            "from": 0,
+            "to": 0.6666666865348816,
+            "wrapMode": 2,
+            "previousId": "48e39"
+          }
+        ]
+      },
+      {
+        "name": "RummerBug_Death",
+        "duration": 0.7666666507720947,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "RummerBug_Death",
+            "from": 0,
+            "to": 0.7666666507720947,
+            "wrapMode": 2,
+            "previousId": "ee29f"
+          }
+        ]
+      },
+      {
+        "name": "RummerBug_Idle",
+        "duration": 2.066666603088379,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "RummerBug_Idle",
+            "from": 0,
+            "to": 2.066666603088379,
+            "wrapMode": 2,
+            "previousId": "74c9e"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "8c8a457a-82eb-44d4-9da4-4c739058195e@37063"
+      ],
+      "skeletons": [
+        "8c8a457a-82eb-44d4-9da4-4c739058195e@3a628"
+      ],
+      "textures": [
+        "8c8a457a-82eb-44d4-9da4-4c739058195e@3effa",
+        "8c8a457a-82eb-44d4-9da4-4c739058195e@221a5"
+      ],
+      "materials": [
+        "8c8a457a-82eb-44d4-9da4-4c739058195e@85416"
+      ],
+      "scenes": [
+        "8c8a457a-82eb-44d4-9da4-4c739058195e@52e39"
+      ]
+    }
+  }
+}

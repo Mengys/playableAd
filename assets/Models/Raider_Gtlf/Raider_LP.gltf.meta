@@ -1,0 +1,378 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a",
+  "files": [
+    "__original-animation-0.cconb",
+    "__original-animation-1.cconb",
+    "__original-animation-2.cconb",
+    "__original-animation-3.cconb"
+  ],
+  "subMetas": {
+    "12828": {
+      "importer": "gltf-animation",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@12828",
+      "displayName": "",
+      "id": "12828",
+      "name": "Tank_Attack.animation",
+      "userData": {
+        "gltfIndex": 3,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.7333333492279053
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "7d4ae": {
+      "importer": "gltf-mesh",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@7d4ae",
+      "displayName": "",
+      "id": "7d4ae",
+      "name": "LightRobot_mesh.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 4826
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f6cb8": {
+      "importer": "gltf-animation",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@f6cb8",
+      "displayName": "",
+      "id": "f6cb8",
+      "name": "Bug_Death.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.7666666507720947
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "724bc": {
+      "importer": "gltf-animation",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@724bc",
+      "displayName": "",
+      "id": "724bc",
+      "name": "Robot_Turn.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 4.366666793823242
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "e697e": {
+      "importer": "gltf-animation",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@e697e",
+      "displayName": "",
+      "id": "e697e",
+      "name": "Robot_Walk.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.100000023841858
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "f19e2": {
+      "importer": "gltf-skeleton",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@f19e2",
+      "displayName": "",
+      "id": "f19e2",
+      "name": "ingamepos.001.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 21
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3effa": {
+      "importer": "texture",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@3effa",
+      "displayName": "",
+      "id": "3effa",
+      "name": "UnnamedTexture-0.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ea267fdb-a22e-4304-95d0-cfa20cd8885b"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "221a5": {
+      "importer": "texture",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@221a5",
+      "displayName": "",
+      "id": "221a5",
+      "name": "UnnamedTexture-1.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Models/Raider_Gtlf/LightRobot_NM_PNG.jpg"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0089c": {
+      "importer": "texture",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@0089c",
+      "displayName": "",
+      "id": "0089c",
+      "name": "UnnamedTexture-2.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Models/Raider_Gtlf/LightRobot_PNG.jpg"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9b633": {
+      "importer": "texture",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@9b633",
+      "displayName": "",
+      "id": "9b633",
+      "name": "UnnamedTexture-3.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ea267fdb-a22e-4304-95d0-cfa20cd8885b"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cdc26": {
+      "importer": "gltf-material",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@cdc26",
+      "displayName": "",
+      "id": "cdc26",
+      "name": "M_LightRobot.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a8e8a": {
+      "importer": "gltf-scene",
+      "uuid": "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@a8e8a",
+      "displayName": "",
+      "id": "a8e8a",
+      "name": "Raider_LP.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "LightRobot_ORME.PNG",
+        "remap": "ea267fdb-a22e-4304-95d0-cfa20cd8885b",
+        "uri": "db://assets/Models/Raider_Gtlf/LightRobot_ORME_PNG.png"
+      },
+      {
+        "name": "LightRobot_NM.PNG",
+        "uri": "db://assets/Models/Raider_Gtlf/LightRobot_NM_PNG.jpg"
+      },
+      {
+        "name": "LightRobot.PNG",
+        "uri": "db://assets/Models/Raider_Gtlf/LightRobot_PNG.jpg"
+      }
+    ],
+    "animationImportSettings": [
+      {
+        "name": "Bug_Death",
+        "duration": 0.7666666507720947,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Bug_Death",
+            "from": 0,
+            "to": 0.7666666507720947,
+            "wrapMode": 2,
+            "previousId": "f6cb8"
+          }
+        ]
+      },
+      {
+        "name": "Robot_Turn",
+        "duration": 4.366666793823242,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Robot_Turn",
+            "from": 0,
+            "to": 4.366666793823242,
+            "wrapMode": 2,
+            "previousId": "724bc"
+          }
+        ]
+      },
+      {
+        "name": "Robot_Walk",
+        "duration": 1.100000023841858,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Robot_Walk",
+            "from": 0,
+            "to": 1.100000023841858,
+            "wrapMode": 2,
+            "previousId": "e697e"
+          }
+        ]
+      },
+      {
+        "name": "Tank_Attack",
+        "duration": 0.7333333492279053,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Tank_Attack",
+            "from": 0,
+            "to": 0.7333333492279053,
+            "wrapMode": 2,
+            "previousId": "12828"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@7d4ae"
+      ],
+      "skeletons": [
+        "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@f19e2"
+      ],
+      "textures": [
+        "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@3effa",
+        "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@221a5",
+        "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@0089c",
+        "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@9b633"
+      ],
+      "materials": [
+        "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@cdc26"
+      ],
+      "scenes": [
+        "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@a8e8a"
+      ]
+    }
+  }
+}
