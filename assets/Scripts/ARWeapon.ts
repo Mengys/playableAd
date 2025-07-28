@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, instantiate } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate,AudioSource, } from 'cc';
 import { Bullet } from './Bullet';
 
 const { ccclass, property } = _decorator;
@@ -15,12 +15,17 @@ export class ARWeapon extends Component {
     @property(Node)
     firePointLeft: Node = null;  // точка появления пули (например, прикрепленная к оружию)
 
-    fireCooldown: number = 0.5;
+    @property(AudioSource)
+    audioSource: AudioSource = null;
+
+    fireCooldown: number = 0.15;
     private _timeSinceLastShot: number = 0;
+    stop: boolean = false;
 
     right: boolean = true;
 
     update(deltaTime: number) {
+        if (this.stop) return;
         this._timeSinceLastShot += deltaTime;
         if (this._timeSinceLastShot >= this.fireCooldown) {
             
@@ -40,6 +45,7 @@ export class ARWeapon extends Component {
             console.warn('Bullet prefab or fire point not assigned!');
             return;
         }
+        this.audioSource.play();
         const bullet = instantiate(this.bulletPrefab);
         bullet.setPosition(firePoint.worldPosition);
         // Добавляем пулю в сцену (например, в Canvas или отдельный слой)
@@ -47,6 +53,14 @@ export class ARWeapon extends Component {
 
         // Здесь можно добавить скрипт движения пули — например bullet.getComponent(Bullet).startMove();
         bullet.getComponent(Bullet).SetDir(firePoint.forward);
+    }
+
+    public StopFire(){
+        this.stop = true;
+    }
+
+    public StartFire(){
+        this.stop = false;
     }
 }
 

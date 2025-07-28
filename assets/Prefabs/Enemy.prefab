@@ -210,6 +210,19 @@
       "__id__": 13
     },
     "player": null,
+    "exp": {
+      "__uuid__": "4fcccb5b-6bbc-44cc-9a03-1d14d8743e76",
+      "__expectedType__": "cc.Prefab"
+    },
+    "blood": {
+      "__uuid__": "7a5d9ff6-c1a2-44e4-a2d9-89cdab794f42",
+      "__expectedType__": "cc.Prefab"
+    },
+    "skelAnim": null,
+    "deathSound": {
+      "__uuid__": "14f227a2-32d7-4da6-be78-a4fca8124a93",
+      "__expectedType__": "cc.Prefab"
+    },
     "_id": ""
   },
   {
@@ -263,7 +276,7 @@
     "__prefab": {
       "__id__": 17
     },
-    "_group": 1,
+    "_group": 4,
     "_type": 1,
     "_mass": 1,
     "_allowSleep": false,
@@ -298,11 +311,37 @@
     },
     "fileId": "5cEaurjHhGT7k+tAERn55J",
     "instance": null,
-    "targetOverrides": null,
+    "targetOverrides": [
+      {
+        "__id__": 19
+      }
+    ],
     "nestedPrefabInstanceRoots": [
       {
         "__id__": 2
       }
+    ]
+  },
+  {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 12
+    },
+    "sourceInfo": null,
+    "propertyPath": [
+      "skelAnim"
+    ],
+    "target": {
+      "__id__": 2
+    },
+    "targetInfo": {
+      "__id__": 20
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "e4RYB9IqhYeb25vKqXKpyY"
     ]
   }
 ]

@@ -1,5 +1,6 @@
-import { _decorator, Component, Vec3, Vec2, Node, Quat, math } from 'cc';
+import { _decorator, Component, Vec3, Vec2, Node, Quat, math, RigidBody, BoxCollider,ITriggerEvent,find,AudioSource, } from 'cc';
 import { RobotAnimation } from './RobotAnimation';
+import { GameController } from './GameController';
 const { ccclass, property } = _decorator;
 
 @ccclass('Character')
@@ -9,9 +10,14 @@ export class Character extends Component {
 
     @property(Node)
     model: Node = null;
+    
+    @property(AudioSource)
+    audioSource: AudioSource = null;
 
-    speed: number = 15;
+    speed: number = 20;
     moveDir: Vec2 = new Vec2(0, 0);
+
+    private gameController: GameController | null = null;
 
     onLoad() {
         this.joystick.on('JoystickMove', this._onJoystickMove, this);
@@ -23,18 +29,39 @@ export class Character extends Component {
 
     start() {
         if (this.model) {
-            const characterComp = this.model.getComponent(RobotAnimation);
-            if (characterComp) {
-                characterComp.playAnim("Robot_Turn"); // вызываем нужную анимацию
+            const robotAnim = this.model.getComponent(RobotAnimation);
+            if (robotAnim) {
+                robotAnim.playAnim("Robot_Turn", this.speed); // вызываем нужную анимацию
             }
         }
+
+        const gameCtrlNode = find('GameController');
+        if (gameCtrlNode) {
+            this.gameController = gameCtrlNode.getComponent(GameController);
+        }
+
+        this.Init();
+    }
+
+    public Init(){
+        console.log("INIT")
+        const rigidBody = this.getComponent(RigidBody);
+        rigidBody.useCCD = true;
+
+        let collider = this.node.getComponent(BoxCollider);
+        collider.on('onTriggerEnter', this.onTriggerEnter, this);
+    }
+
+
+    public SetSpeed(speed: number){
+        this.speed = speed;
     }
 
     update(deltaTime: number) {
         const characterComp = this.model.getComponent(RobotAnimation);
         if (this.moveDir.lengthSqr() > 0.01) {
             if (characterComp) {
-                characterComp.playAnim("Robot_Walk"); // вызываем нужную анимацию
+                characterComp.playAnim("Robot_Walk", this.speed); // вызываем нужную анимацию
             }
             // 1. Двигаем персонажа
             const move = new Vec3(this.moveDir.x, 0, -this.moveDir.y)
@@ -52,8 +79,16 @@ export class Character extends Component {
         }
         else {
             if (characterComp) {
-                characterComp.playAnim("Robot_Turn"); // вызываем нужную анимацию
+                characterComp.playAnim("Robot_Turn", this.speed); // вызываем нужную анимацию
             }
         }
+    }
+
+    private onTriggerEnter(event: ITriggerEvent){
+        console.log("test");
+        event.otherCollider.node.destroy();
+
+        this.audioSource.play();
+        this.gameController.AddExp();
     }
 }

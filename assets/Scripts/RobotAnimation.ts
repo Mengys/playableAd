@@ -8,9 +8,11 @@ export class RobotAnimation extends Component {
 
     state: string = "";
 
-    playAnim(animName: string) {
+    playAnim(animName: string, speed: number) {
         if (animName != this.state){
             if (this.skelAnim) {
+                let state = this.skelAnim.getState(animName);
+                state.speed = speed/11;
                 this.skelAnim.play(animName);
                 this.state = animName;
             }

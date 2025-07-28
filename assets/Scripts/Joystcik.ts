@@ -9,11 +9,19 @@ export class Joystick extends Component {
     @property(Node)
     dot: Node = null;
 
+    @property(Node)
+    tutorial: Node = null;
+
     @property
     radius: number = 100; // радиус джойстика
 
     private _dir: Vec2 = new Vec2(0, 0);
     private _isTouching: boolean = false;
+    private _ringPosition: Vec3 = new Vec3(0, 0, 0);
+
+    protected start(): void {
+        this.ring.active = false;
+    }
 
     onLoad() {
         this.node.on(Input.EventType.TOUCH_START, this._onTouchStart, this);
@@ -23,8 +31,18 @@ export class Joystick extends Component {
     }
 
     _onTouchStart(event: EventTouch) {
+
+        this.ring.active = true;
         this._isTouching = true;
-        this._handleTouch(event);
+        //this._handleTouch(event);
+        const uiPos = event.getUILocation();
+        const localPos = this.node.getComponent(UITransform).convertToNodeSpaceAR(new Vec3(uiPos.x, uiPos.y));
+        console.log(uiPos);
+        console.log(new Vec3(uiPos.x, uiPos.y));
+        console.log(localPos);
+        this.ring.setPosition(localPos);
+        this._ringPosition = localPos;
+        this.tutorial.active = false;
     }
 
     _onTouchMove(event: EventTouch) {
@@ -32,6 +50,7 @@ export class Joystick extends Component {
     }
 
     _onTouchEnd(event: EventTouch) {
+        this.ring.active = false;
         this._isTouching = false;
         this.dot.setPosition(0, 0, 0);
         this._dir.set(0, 0);
@@ -41,6 +60,7 @@ export class Joystick extends Component {
     _handleTouch(event: EventTouch) {
         const uiPos = event.getUILocation();
         const localPos = this.node.getComponent(UITransform).convertToNodeSpaceAR(new Vec3(uiPos.x, uiPos.y));
+        localPos.subtract(this._ringPosition);
         let dir = new Vec2(localPos.x, localPos.y);
         const len = dir.length();
         if (len > this.radius) {
@@ -53,5 +73,12 @@ export class Joystick extends Component {
 
     getDirection(): Vec2 {
         return this._dir;
+    }
+
+    public Reset(){
+        this._isTouching = false;
+        this.dot.setPosition(0, 0, 0);
+        this._dir.set(0, 0);
+        this.node.emit('JoystickMove', this._dir);
     }
 }

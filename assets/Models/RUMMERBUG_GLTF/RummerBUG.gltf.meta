@@ -142,8 +142,8 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/Models/RUMMERBUG_GLTF/RammerBug_NM.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f4bdd58a-cf15-4e3f-8f2a-f81523f3a548"
       },
       "ver": "1.0.22",
       "imported": true,
@@ -165,8 +165,8 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/Models/RUMMERBUG_GLTF/RammerBugElite_Full.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "821ad244-528a-4604-98d9-665e02d12208"
       },
       "ver": "1.0.22",
       "imported": true,
@@ -196,10 +196,12 @@
     "imageMetas": [
       {
         "name": "RammerBug_NM",
+        "remap": "f4bdd58a-cf15-4e3f-8f2a-f81523f3a548",
         "uri": "db://assets/Models/RUMMERBUG_GLTF/RammerBug_NM.png"
       },
       {
         "name": "RammerBugElite_Full",
+        "remap": "821ad244-528a-4604-98d9-665e02d12208",
         "uri": "db://assets/Models/RUMMERBUG_GLTF/RammerBugElite_Full.png"
       }
     ],
@@ -282,6 +284,12 @@
       "scenes": [
         "8c8a457a-82eb-44d4-9da4-4c739058195e@52e39"
       ]
+    },
+    "meshCompress": {
+      "encode": true,
+      "compress": true,
+      "quantize": true,
+      "enable": true
     }
   }
 }

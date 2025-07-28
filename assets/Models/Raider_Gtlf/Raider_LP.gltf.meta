@@ -151,7 +151,7 @@
         "mipfilter": "linear",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "ea267fdb-a22e-4304-95d0-cfa20cd8885b"
+        "imageUuidOrDatabaseUri": "cfb1248e-7c39-4507-b6d8-b7d151eed339"
       },
       "ver": "1.0.22",
       "imported": true,
@@ -173,8 +173,8 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/Models/Raider_Gtlf/LightRobot_NM_PNG.jpg"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "b4bbec5b-8144-4da8-8cfc-a810b7d80cf5"
       },
       "ver": "1.0.22",
       "imported": true,
@@ -220,7 +220,7 @@
         "mipfilter": "linear",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "ea267fdb-a22e-4304-95d0-cfa20cd8885b"
+        "imageUuidOrDatabaseUri": "cfb1248e-7c39-4507-b6d8-b7d151eed339"
       },
       "ver": "1.0.22",
       "imported": true,
@@ -266,11 +266,12 @@
     "imageMetas": [
       {
         "name": "LightRobot_ORME.PNG",
-        "remap": "ea267fdb-a22e-4304-95d0-cfa20cd8885b",
+        "remap": "cfb1248e-7c39-4507-b6d8-b7d151eed339",
         "uri": "db://assets/Models/Raider_Gtlf/LightRobot_ORME_PNG.png"
       },
       {
         "name": "LightRobot_NM.PNG",
+        "remap": "b4bbec5b-8144-4da8-8cfc-a810b7d80cf5",
         "uri": "db://assets/Models/Raider_Gtlf/LightRobot_NM_PNG.jpg"
       },
       {
@@ -373,6 +374,12 @@
       "scenes": [
         "76f8bb45-b3dd-4b9d-8eeb-47bd7e09491a@a8e8a"
       ]
+    },
+    "meshCompress": {
+      "quantize": true,
+      "enable": true,
+      "compress": true,
+      "encode": true
     }
   }
 }
