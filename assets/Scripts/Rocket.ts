@@ -13,7 +13,7 @@ export class Rocket extends Component {
     protected start(): void {
         const rigidBody = this.getComponent(RigidBody);
         rigidBody.useCCD = true;
-        this.particleSystem.play();
+        //this.particleSystem.play();
     }
 
     update(deltaTime: number) {

@@ -1,5 +1,6 @@
-import { _decorator, Component, Node, Prefab, instantiate,AudioSource, } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate,AudioSource,find } from 'cc';
 import { Rocket } from './Rocket';
+import { AudioController } from './AudioController';
 
 const { ccclass, property } = _decorator;
 
@@ -23,6 +24,11 @@ export class RocketWeapon extends Component {
     stop: boolean = false;
 
     right: boolean = true;
+    audioController: AudioController = null;
+
+    protected start(): void {
+        this.audioController = find("AudioController").getComponent(AudioController);
+    }   
 
     update(deltaTime: number) {
         if (this.stop) return;
@@ -45,7 +51,9 @@ export class RocketWeapon extends Component {
             console.warn('Bullet prefab or fire point not assigned!');
             return;
         }
-        this.audioSource.play();
+        if (this.audioController.IsSoundEnabled){
+            this.audioSource.play();
+        }
         const bullet = instantiate(this.rocketPrefab);
         bullet.setPosition(firePoint.worldPosition);
         // Добавляем пулю в сцену (например, в Canvas или отдельный слой)

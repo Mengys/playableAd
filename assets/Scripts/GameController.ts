@@ -1,10 +1,12 @@
-import { _decorator, Component, Node, AudioClip, AudioSource } from 'cc';
+import { _decorator, Component, Node, AudioClip, AudioSource,find } from 'cc';
 import { ARWeapon } from './ARWeapon';
 import { Enemy } from './Enemy';
 import { Joystick } from './Joystcik';
 import { Character } from './Character';
 import { RocketWeapon } from './RocketWeapon';
 import { ExpBar1 } from './ExpBar1';
+import { AudioController } from './AudioController';
+
 const { ccclass, property } = _decorator;
 
 @ccclass('GameController')
@@ -46,9 +48,12 @@ export class GameController extends Component {
     currentBar: Node;
     exp: number = 0;
     kills: number = 0;
+    wave: number = 1;
     isARWeapon: boolean = true;
+    audioController: AudioController = null;
 
     start() {
+        this.audioController = find("AudioController").getComponent(AudioController);
         for (let i = 0; i < this.enemies.length; i++){
             this.enemies[i].active = false;
         }
@@ -60,7 +65,7 @@ export class GameController extends Component {
         }
         this.buttons[0].active = true;
         this.buttons[1].active = true;
-        this.pointer.active = false;
+        //this.pointer.active = false;
         this.tutorial.active = false;
         this.currentBar = this.expBar1;
         this.currentBar.active = true;
@@ -76,18 +81,22 @@ export class GameController extends Component {
         this.joystick.active = true;
         this.buttons[0].active = false;
         this.buttons[1].active = false;
-        this.audioSource.clip = this.upgradeAudio;
-        this.audioSource.play();
+        if (this.audioController.IsSoundEnabled){
+            this.audioSource.clip = this.upgradeAudio;
+            this.audioSource.play();
+        }
         this.tutorial.active = true;
     }
 
     public AddExp(){
         this.exp++;
         this.currentBar.getComponent(ExpBar1).AddExp();
-        if (this.exp == 7) {
+        if (this.exp >= 10 && this.wave == 1) {
+            this.wave = 2;
+            this.exp = 10;
             this.StartChoseReward();
         }
-        if (this.exp == 17) {
+        if (this.exp >= 20 && this.wave == 2) {
             this.StartChoseReward2();
         }
     }
@@ -95,21 +104,31 @@ export class GameController extends Component {
     public AddKill(){
         this.kills++;
         if (this.kills == 7) {
-            this.pointer.active = true;
+            //this.pointer.active = true;
         }
         if (this.kills == 17) {
-            this.pointer.active = true;
+            //this.pointer.active = true;
         }
     }
 
     public StartChoseReward(){
+        this.currentBar.getComponent(ExpBar1).Full();
+        let exps = this.findNodesByName(this.node.getParent(),"Exp");
+        for (let i = 0; i < exps.length; i++) {
+            exps[i].destroy();
+        }
+
+        for (let i = 0; i < 7; i++){
+            this.enemies[i].destroy();
+        }
+
         this.player.getComponent(ARWeapon).StopFire();
         this.player.getComponent(RocketWeapon).StopFire();
         this.joystick.getComponent(Joystick).Reset();
         this.joystick.active = false;
         this.buttons[2].active = true;
         this.buttons[3].active = true;
-        this.pointer.active = false;
+        //this.pointer.active = false;
     }
 
     public SpeedUp(){
@@ -132,6 +151,10 @@ export class GameController extends Component {
         } else {
             this.player.getComponent(RocketWeapon).StartFire();
         }
+        if (this.audioController.IsSoundEnabled){
+            this.audioSource.clip = this.upgradeAudio;
+            this.audioSource.play();
+        }
         this.joystick.active = true;
         this.buttons[2].active = false;
         this.buttons[3].active = false;
@@ -141,12 +164,30 @@ export class GameController extends Component {
     }
 
     public StartChoseReward2(){
-        this.pointer.active = false;
+        this.currentBar.getComponent(ExpBar1).Full();
+        let exps = this.findNodesByName(this.node.getParent(),"Exp");
+        for (let i = 0; i < exps.length; i++) {
+            exps[i].destroy();
+        }
+        for (let i = 7; i < 17; i++){
+            this.enemies[i].destroy();
+        }
+        //this.pointer.active = false;
         this.player.getComponent(ARWeapon).StopFire();
         this.player.getComponent(RocketWeapon).StopFire();
         this.joystick.getComponent(Joystick).Reset();
         this.joystick.active = false;
         this.buttons[4].active = true;
         this.buttons[5].active = true;
+    }
+
+    findNodesByName(root: Node, targetName: string, result: Node[] = []): Node[] {
+        if (root.name === targetName) {
+            result.push(root);
+        }
+        for (const child of root.children) {
+            this.findNodesByName(child, targetName, result);
+        }
+        return result;
     }
 }

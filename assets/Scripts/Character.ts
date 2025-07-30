@@ -1,6 +1,7 @@
 import { _decorator, Component, Vec3, Vec2, Node, Quat, math, RigidBody, BoxCollider,ITriggerEvent,find,AudioSource, } from 'cc';
 import { RobotAnimation } from './RobotAnimation';
 import { GameController } from './GameController';
+import { AudioController } from './AudioController';
 const { ccclass, property } = _decorator;
 
 @ccclass('Character')
@@ -19,6 +20,8 @@ export class Character extends Component {
 
     private gameController: GameController | null = null;
 
+    audioController: AudioController = null;
+
     onLoad() {
         this.joystick.on('JoystickMove', this._onJoystickMove, this);
     }
@@ -28,6 +31,7 @@ export class Character extends Component {
     }
 
     start() {
+        this.audioController = find("AudioController").getComponent(AudioController);
         if (this.model) {
             const robotAnim = this.model.getComponent(RobotAnimation);
             if (robotAnim) {
@@ -88,7 +92,9 @@ export class Character extends Component {
         console.log("test");
         event.otherCollider.node.destroy();
 
-        this.audioSource.play();
+        if (this.audioController.IsSoundEnabled){
+            this.audioSource.play();
+        }
         this.gameController.AddExp();
     }
 }

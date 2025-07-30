@@ -16,6 +16,7 @@ import {
     instantiate,
      } from 'cc';
 import { GameController } from './GameController';
+import { AudioController } from './AudioController';
 
 const { ccclass, property } = _decorator;
 
@@ -39,9 +40,10 @@ export class Enemy extends Component {
     gameController: Node = null;
     speed: number = 10;
     health: number = 6;
+    audioController: AudioController = null;
 
     protected start(): void {
-        console.log("start");
+        this.audioController = find("AudioController").getComponent(AudioController);
         this.gameController = find('GameController');
         let state = this.skelAnim.getState("RummerBag_Attack");
         state.speed = randomRange(0.8, 1.2);
@@ -92,14 +94,18 @@ export class Enemy extends Component {
 
     private onDeath(){
         this.gameController.getComponent(GameController).AddKill();
-        const deathSound = instantiate(this.deathSound);
-        this.node.parent.parent.addChild(deathSound);
+        if (this.audioController.IsSoundEnabled){
+            const deathSound = instantiate(this.deathSound);
+            this.node.parent.parent.addChild(deathSound);
+        }
         const blood = instantiate(this.blood);
         blood.position = this.node.position;
         this.node.parent.parent.addChild(blood);
-        const exp = instantiate(this.exp);
-        this.node.parent.parent.addChild(exp);
-        exp.position = this.node.position;
+        for (let i = 0; i < 3; i++) {
+            const exp = instantiate(this.exp);
+            this.node.parent.parent.addChild(exp);
+            exp.position = this.node.position;
+        }
         this.node.destroy();
     }
 }

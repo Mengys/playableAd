@@ -4,18 +4,21 @@ const { ccclass, property } = _decorator;
 @ccclass('ExpBar1')
 export class ExpBar1 extends Component {
 
-    @property(SpriteFrame)
-    empty: SpriteFrame = null;
-    @property(SpriteFrame)
-    full: SpriteFrame = null;
-
-    @property({ type:[Node]})
-    bars: Node[] = [];
+    @property({ type:[SpriteFrame]})
+    bars: SpriteFrame[] = [];
 
     i: number = 0;
 
     public AddExp(){
-        this.bars[this.i].getComponent(Sprite).spriteFrame = this.full;
-        this.i++;
+        if (this.i < this.bars.length){
+            this.node.getComponent(Sprite).spriteFrame = this.bars[this.i];
+            this.i++;
+        }
+    }
+
+    public Full(){
+        for (let i = 0; i < this.bars.length; i++){
+            this.node.getComponent(Sprite).spriteFrame = this.bars[ this.bars.length];
+        }
     }
 }

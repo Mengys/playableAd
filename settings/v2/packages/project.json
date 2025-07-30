@@ -25,6 +25,10 @@
       {
         "index": 4,
         "name": "Exp"
+      },
+      {
+        "index": 5,
+        "name": "Plane"
       }
     ],
     "collisionMatrix": {
@@ -32,7 +36,11 @@
       "1": 4,
       "2": 2,
       "3": 16,
-      "4": 8
+      "4": 40,
+      "5": 16
+    },
+    "gravity": {
+      "y": -20
     }
   },
   "custom_joint_texture_layouts": [],

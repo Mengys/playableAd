@@ -10,7 +10,7 @@ export class CameraFollow extends Component {
     update() {
         if (this.player) {
             this.node.position = this.player.position;
-            this.node.position.add(new Vec3(0, 45, 15));
+            this.node.position.add(new Vec3(0, 35, 25));
         }
     }
 }

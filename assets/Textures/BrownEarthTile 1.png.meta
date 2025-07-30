@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "579a9394-44a5-4fb8-b647-7b451949c97a",
+  "uuid": "5df1d230-fb0e-4460-9488-8c06117e93fe",
   "files": [
     ".json",
     ".png"
@@ -10,8 +10,8 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "579a9394-44a5-4fb8-b647-7b451949c97a@6c48a",
-      "displayName": "1",
+      "uuid": "5df1d230-fb0e-4460-9488-8c06117e93fe@6c48a",
+      "displayName": "BrownEarthTile 1",
       "id": "6c48a",
       "name": "texture",
       "userData": {
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "579a9394-44a5-4fb8-b647-7b451949c97a",
+        "imageUuidOrDatabaseUri": "5df1d230-fb0e-4460-9488-8c06117e93fe",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "type": "texture",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "579a9394-44a5-4fb8-b647-7b451949c97a@6c48a"
+    "redirect": "5df1d230-fb0e-4460-9488-8c06117e93fe@6c48a"
   }
 }
