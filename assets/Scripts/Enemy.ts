@@ -83,7 +83,7 @@ export class Enemy extends Component {
     private onTriggerEnter (event: ITriggerEvent) {
         if (event.otherCollider.node.name == "Rocket"){
             this.health = 0;
-        } else {
+        } else if (event.otherCollider.node.name == "Bullet"){
             this.health--;
         }
         event.otherCollider.node.destroy();

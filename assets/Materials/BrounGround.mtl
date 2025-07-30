@@ -84,6 +84,7 @@
         "z": 0,
         "w": 0
       },
+      "roughness": 0,
       "mainTexture": {
         "__uuid__": "9c19a178-4665-4996-b3e3-29daa2da4232@6c48a",
         "__expectedType__": "cc.Texture2D"
