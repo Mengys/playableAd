@@ -48,7 +48,6 @@ export class Character extends Component {
     }
 
     public Init(){
-        console.log("INIT")
         const rigidBody = this.getComponent(RigidBody);
         rigidBody.useCCD = true;
 
@@ -89,7 +88,6 @@ export class Character extends Component {
     }
 
     private onTriggerEnter(event: ITriggerEvent){
-        console.log("test");
         event.otherCollider.node.destroy();
 
         if (this.audioController.IsSoundEnabled){

@@ -74,6 +74,7 @@ export class GameController extends Component {
     public StartFirstWave(){
         for (let i = 0; i < 7; i++){
             this.enemies[i].active = true;
+            this.enemies[i].position.add(this.player.position);
             this.enemies[i].getComponent(Enemy).Init();
         }
         this.hand.active = false;
@@ -84,6 +85,7 @@ export class GameController extends Component {
         if (this.audioController.IsSoundEnabled){
             this.audioSource.clip = this.upgradeAudio;
             this.audioSource.play();
+            this.audioController.StartAudio();
         }
         this.tutorial.active = true;
     }
@@ -119,7 +121,11 @@ export class GameController extends Component {
         }
 
         for (let i = 0; i < 7; i++){
-            this.enemies[i].destroy();
+            if (this.enemies[i] && !this.enemies[i].isValid) {
+                continue;
+            }
+            this.enemies[i]?.destroy();
+            this.enemies[i] = null;
         }
 
         this.player.getComponent(ARWeapon).StopFire();
@@ -144,6 +150,7 @@ export class GameController extends Component {
     public StartSecondWave(){
         for (let i = 7; i < 17; i++){
             this.enemies[i].active = true;
+            this.enemies[i].position.add(this.player.position);
             this.enemies[i].getComponent(Enemy).Init();
         }
         if(this.isARWeapon){
@@ -170,7 +177,11 @@ export class GameController extends Component {
             exps[i].destroy();
         }
         for (let i = 7; i < 17; i++){
-            this.enemies[i].destroy();
+            if (this.enemies[i] && !this.enemies[i].isValid) {
+                continue;
+            }
+            this.enemies[i]?.destroy();
+            this.enemies[i] = null;
         }
         //this.pointer.active = false;
         this.player.getComponent(ARWeapon).StopFire();

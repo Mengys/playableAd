@@ -37,9 +37,6 @@ export class Joystick extends Component {
         //this._handleTouch(event);
         const uiPos = event.getUILocation();
         const localPos = this.node.getComponent(UITransform).convertToNodeSpaceAR(new Vec3(uiPos.x, uiPos.y));
-        console.log(uiPos);
-        console.log(new Vec3(uiPos.x, uiPos.y));
-        console.log(localPos);
         this.ring.setPosition(localPos);
         this._ringPosition = localPos;
         this.tutorial.active = false;
